@@ -1,3 +1,4 @@
+not necessary to do this but if we want a clean code representation and file management, can do this. 
 *********************************PREVENTS __pycache__ CREATION GENERATED WHEN LOGGING LOGS**************************
 # Write this code in src.__init__.py file:
 

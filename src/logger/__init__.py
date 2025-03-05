@@ -16,7 +16,7 @@ BACKUP_COUNT = 3  # Number of backup log files to keep
 
 # here, Manually defined the project root (since my from_root() wasn't detecting "MLOps-project-01" but stored logs in "C:\Users\dell")
 PROJECT_ROOT = r"C:\Users\dell\OneDrive\Desktop\MLOps-Projects-Folder\MLOps-project-01"
-LOG_DIR = "logs"
+
 
 # Define log path
 log_dir_path = os.path.join(PROJECT_ROOT, LOG_DIR)
