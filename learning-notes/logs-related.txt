@@ -1,0 +1,8 @@
+ISSUE FACED: logs were not generated in the correct place also, incorrect Project Root Detection:
+-my from_root() funcn. was returning C:\Users\dell instead of actual project root (C:\Users\dell\OneD...\MLOps-project-01).
+
+SOLUTION--> Manually defined the project root i.e.
+
+#code 
+PROJECT_ROOT = r"C:\Users\dell\OneDrive\Desktop\MLOps-Projects-Folder\MLOps-project-01"
+LOG_DIR = "logs"

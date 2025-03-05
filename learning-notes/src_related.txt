@@ -1,0 +1,38 @@
+*********************************PREVENTS __pycache__ CREATION GENERATED WHEN LOGGING LOGS**************************
+# Write this code in src.__init__.py file:
+
+import sys
+sys.dont_write_bytecode = True
+
+Note_1: Needs to be on the very top of the running script.
+
+
+
+Note_2: ----------------------ALTERNATIVE 1 ------------------->
+- instead of relying on src/__init__.py, 
+- you should write the code of (sys.dont_write_bytecode = True) in your main script for eg: like in demo.py i.e.
+- modify demo.py (or your main script) to include this at the top (important that it stays on the very top to execute).
+
+Note_3: Any script that directly runs and imports from src will need to include: ( sys.dont_write_bytecode = True )
+- If you have multiple entry-point scripts i.e. demo.py, train.py, app.py which we do in our project,
+- each of them should include the ( sys.dont_write_bytecode = True ) line at the top.
+
+Note_4:  You only need ( sys.dont_write_bytecode = True ) in entry-point scripts i.e. scripts you run directly.
+- Imported modules (inside src/ folder) will follow the setting from the script that imports them.
+- This means src/logger/__init__.py does not need the line since running script (demo.py) already takes care of it
+
+
+
+Note_5: --------------------ALTERNATIVE 2--------------------->
+# write this command in Terminal (Windows) => set PYTHONDONTWRITEBYTECODE=1
+
+- This tells Python not to write .pyc files for the duration of that terminal session. 
+- The duration of a terminal session lasts until you close the terminal.
+- Once you close the terminal or restart your system, the setting will be lost, and 
+- Python will start generating __pycache__ again unless you set it permanently in the environment variables.
+- If you want a permanent solution, you should add PYTHONDONTWRITEBYTECODE=1 to your system's environment variables,
+- Setting it permanently is not good practice coz it results in slower system, so try other methods like previous one.
+
+
+
+ 
