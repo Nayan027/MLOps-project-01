@@ -170,3 +170,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+artifact/   
+# adding artifact to gitignore so it isnt tracked

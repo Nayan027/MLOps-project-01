@@ -28,3 +28,9 @@
 #     raise MyException(e, sys) from e
 
 # --------------------------------------------------------------------------------
+
+# This code is to run the pipeline the check the proper working of pipeline at end of each phase
+from src.pipline.training_pipeline import TrainPipeline
+
+pipline = TrainPipeline()
+pipline.run_pipeline()

@@ -1,0 +1,25 @@
+Issue faced: setting up env. variable i.e. (MONGODB_URL)
+
+SOLUTION:
+---------------------------------------------------------------------------------------------------------------
+After adding code to components.data_ingestion.py file and then further 
+adding code corresponding to the Data Ingestion phase in the to TRAINING PIPELINE.
+---------------------------------------------------------------------------------------------------------------
+
+Before running demo.py to test our entire data ingestion setupset in the pipeline,
+we need to set-up the MONGODB CONNECTION URL first.
+---------------------------------------------------------------------------------------------------------------
+
+To SETUP the connection url (windows):
+open (new) Powershell terminal i.e. PS and run below command:
+---------------------------------------------------------------------------------------------------------------
+
+setting environment variable : $env:MONGODB_URL = "mongodb+srv://<username>:<password>......"
+checking if it's set or not  : echo $env:MONGODB_URL
+---------------------------------------------------------------------------------------------------------------
+
+now RUN demo.py in the v-env created to check if the pipeline runs well for the data-ingestion phase created.
+---------------------------------------------------------------------------------------------------------------
+
+also, add artifact folder created on running pipeline into GITIGNORE by simply adding (artifact/) to .gitignore 
+so that it is untracked 
