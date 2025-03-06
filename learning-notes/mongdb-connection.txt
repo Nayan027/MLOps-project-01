@@ -22,4 +22,4 @@ now RUN demo.py in the v-env created to check if the pipeline runs well for the 
 ---------------------------------------------------------------------------------------------------------------
 
 also, add artifact folder created on running pipeline into GITIGNORE by simply adding (artifact/) to .gitignore 
-so that it is untracked 
+so that it is untracked. 

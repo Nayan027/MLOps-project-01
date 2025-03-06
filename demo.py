@@ -19,8 +19,8 @@
 # below code is to check the exception config
 # from src.logger import logging
 # from src.exception import MyException
-# import sys
-
+import sys
+sys.dont_write_bytecode = True
 # try:
 #     a = 1+'Z'
 # except Exception as e:
