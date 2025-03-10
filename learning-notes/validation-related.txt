@@ -1,0 +1,9 @@
+Issue in Data Validation:
+
+
+The validation script might be expecting extra columns that are not present.
+Compare the actual columns in train.csv and test.csv with the expected columns.
+-------------------------------------------------------------------------------------------------------------------
+Schema Mismatch:
+Check your data schema definition. If validation rules are strict,
+even minor name mismatches (e.g., column_name vs. Column_Name) can cause issues.

@@ -44,10 +44,11 @@ class Proj1Data:
             else:
                 collection = self.mongo_client[database_name][collection_name]
 
-            # Convert collection data to DataFrame and preprocess
+            # Convert collection data to DataFrame and preprocessprint
+            print(f"Total records in MongoDB collection before export: {collection.count_documents({})}")
             print("Fetching data from mongoDB")
-            df = pd.DataFrame(list(collection.find()))
-            print(f"Data fecthed with len: {len(df)}")
+            df = pd.DataFrame(list(collection.find({}, {"_id": 0})))  # Exclude _id
+            print(f"Data fetched from MongoDB with {len(df)} records")
             if "id" in df.columns.to_list():
                 df = df.drop(columns=["id"], axis=1)
             df.replace({"na":np.nan},inplace=True)

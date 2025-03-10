@@ -16,6 +16,13 @@ open (new) Powershell terminal i.e. PS and run below command:
 
 setting environment variable : $env:MONGODB_URL = "mongodb+srv://<username>:<password>......"
 checking if it's set or not  : echo $env:MONGODB_URL
+
+--------------------------------------------------------------------------------------------------------------
+for cmd, use the command below for a permanent change in the env. variable i.e. 
+Set Globally for Windows User (Optional) and If you want the environment variable to persist across all sessions, use:
+
+setx AWS_ACCESS_KEY_ID "abc"
+
 ---------------------------------------------------------------------------------------------------------------
 
 now RUN demo.py in the v-env created to check if the pipeline runs well for the data-ingestion phase created.
@@ -23,3 +30,9 @@ now RUN demo.py in the v-env created to check if the pipeline runs well for the 
 
 also, add artifact folder created on running pipeline into GITIGNORE by simply adding (artifact/) to .gitignore 
 so that it is untracked. 
+
+
+powershell                                            command prompt
+echo $env:AWS_ACCESS_KEY_ID                       echo %AWS_ACCESS_KEY_ID%
+echo $env:AWS_SECRET_ACCESS_KEY                   echo %AWS_SECRET_ACCESS_KEY%
+

@@ -1,6 +1,6 @@
 # for use in data validation phase 
 columns:
-  - id: int
+  # - id: int
   - Gender: category
   - Age: int
   - Driving_License: int
