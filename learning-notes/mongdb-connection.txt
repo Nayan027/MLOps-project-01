@@ -33,6 +33,6 @@ so that it is untracked.
 
 
 powershell                                            command prompt
-echo $env:AWS_ACCESS_KEY_ID                       echo %AWS_ACCESS_KEY_ID%
-echo $env:AWS_SECRET_ACCESS_KEY                   echo %AWS_SECRET_ACCESS_KEY%
+echo $env:AWS_ACCESS_KEY_ID                       echo %AWS_ACCESS_KEY_ID%      -    
+echo $env:AWS_SECRET_ACCESS_KEY                   echo %AWS_SECRET_ACCESS_KEY%  -  
 
