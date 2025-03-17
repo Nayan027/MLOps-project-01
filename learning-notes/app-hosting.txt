@@ -1,0 +1,11 @@
+When we run command - "python app.py" and receive a link such as [http://0.0.0.0:5000]
+
+If your app isn’t running at http://0.0.0.0:5000, try Alternatives:
+
+1. Localhost (Default for Flask)
+👉 [http://127.0.0.1:5000]
+-  This is the safest and most common way to access your Flask app on your local machine.
+
+2. Explicit Localhost Address
+👉 [http://localhost:5000]
+-  Some systems resolve localhost better than 127.0.0.1.
